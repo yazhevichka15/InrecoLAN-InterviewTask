@@ -1,0 +1,53 @@
+:root {
+    --basic-font: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+
+    --white: #fff;
+    --dark-gray: #3e3e3e;
+    --light-gray: #a5a5a5;
+    --light-yellow: #fbe2c0;
+    --yellow: #ffd05b;
+    --orange: #ff5e5e;
+    --red: #b0183d;
+    --gradient: linear-gradient(
+        120deg,
+        var(--light-yellow),
+        var(--yellow),
+        var(--orange),
+        var(--red)
+    );
+    --shadow: 1px 1px 5px var(--light-gray);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.listOfUsers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin: 3% 0;
+    font-family: var(--basic-font);
+    font-weight: 800;
+    font-size: 3rem;
+    text-decoration: underline var(--yellow);
+    text-underline-offset: 10px;
+    color: var(--dark-gray);
+    animation: load-content 1.5s ease;
+}
+
+@keyframes load-content {
+    0% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}

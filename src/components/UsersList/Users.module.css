@@ -1,0 +1,25 @@
+.users {
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.errorMessage {
+    font-family: var(--basic-font);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+@media (max-width: 1024px) {
+    .users {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .users {
+        grid-template-columns: 1fr;
+    }
+}
